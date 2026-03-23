@@ -130,12 +130,12 @@ If your data is not already in `.npy`, convert it beforehand into a `float32` Nu
 
 Update these files as needed:
 
-- [configs/train.yaml](/Users/liuxiwei/Downloads/conference/WACV/code/configs/train.yaml)
-- [configs/infer.yaml](/Users/liuxiwei/Downloads/conference/WACV/code/configs/infer.yaml)
-- [configs/dataset/shrec2020.yaml](/Users/liuxiwei/Downloads/conference/WACV/code/configs/dataset/shrec2020.yaml)
-- [configs/dataset/shrec2021.yaml](/Users/liuxiwei/Downloads/conference/WACV/code/configs/dataset/shrec2021.yaml)
-- [configs/dataset/polnet.yaml](/Users/liuxiwei/Downloads/conference/WACV/code/configs/dataset/polnet.yaml)
-- [configs/dataset/real_data.yaml](/Users/liuxiwei/Downloads/conference/WACV/code/configs/dataset/real_data.yaml)
+- [configs/train.yaml]
+- [configs/infer.yaml]
+- [configs/dataset/shrec2020.yaml]
+- [configs/dataset/shrec2021.yaml]
+- [configs/dataset/polnet.yaml]
+- [configs/dataset/real_data.yaml]
 
 ### Step 3. Preprocess a volume
 
@@ -215,12 +215,6 @@ The current evaluation pipeline computes:
 - validation loss
 - PSNR
 - SSIM
-
-The repository also contains an FSC metric scaffold in:
-
-- [fsc.py](/Users/liuxiwei/Downloads/conference/WACV/code/src/self_cryoet/metrics/fsc.py)
-
-For strict paper-level real-data evaluation, FSC computation usually needs a dataset-specific protocol and subtomogram handling pipeline. That part should be aligned with your exact Cryo-ET evaluation setup.
 
 ## ⚙️ Recommended Config Strategy
 
