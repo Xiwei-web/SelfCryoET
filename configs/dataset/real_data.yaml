@@ -1,0 +1,24 @@
+name: real_cryoet
+description: Real-world Cryo-ET volumes without clean ground truth.
+
+dataset:
+  volume_path: data/raw/real/sample_volume.npy
+  patch_size: [108, 108, 108]
+  stride: [54, 54, 54]
+  normalize: true
+  gaussian_sigma: 1.0
+  bilateral_kernel_size: 5
+  bilateral_sigma_spatial: 2.0
+  bilateral_sigma_intensity: 0.1
+
+evaluation:
+  metrics: [fsc]
+  has_ground_truth: false
+  ground_truth_path:
+
+preprocess:
+  gaussian_sigma: 1.0
+  bilateral_kernel_size: 5
+  bilateral_sigma_spatial: 2.0
+  bilateral_sigma_intensity: 0.1
+

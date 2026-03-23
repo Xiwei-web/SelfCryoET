@@ -1,0 +1,24 @@
+name: polnet
+description: Simulated Cryo-ET volumes generated with PolNet.
+
+dataset:
+  volume_path: data/raw/polnet/sample_volume.npy
+  patch_size: [108, 108, 108]
+  stride: [54, 54, 54]
+  normalize: true
+  gaussian_sigma: 1.0
+  bilateral_kernel_size: 5
+  bilateral_sigma_spatial: 2.0
+  bilateral_sigma_intensity: 0.1
+
+evaluation:
+  metrics: [psnr, ssim]
+  has_ground_truth: true
+  ground_truth_path: data/raw/polnet/sample_gt.npy
+
+preprocess:
+  gaussian_sigma: 1.0
+  bilateral_kernel_size: 5
+  bilateral_sigma_spatial: 2.0
+  bilateral_sigma_intensity: 0.1
+
