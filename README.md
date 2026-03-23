@@ -137,15 +137,6 @@ Update these files as needed:
 - [configs/dataset/polnet.yaml](/Users/liuxiwei/Downloads/conference/WACV/code/configs/dataset/polnet.yaml)
 - [configs/dataset/real_data.yaml](/Users/liuxiwei/Downloads/conference/WACV/code/configs/dataset/real_data.yaml)
 
-At minimum, check:
-
-- `dataset.volume_path`
-- `checkpoint_path`
-- `output_path`
-- `patch_size`
-- `stride`
-- `device`
-
 ### Step 3. Preprocess a volume
 
 Generate normalized, Gaussian-smoothed, bilateral-filtered, and edge-enhanced reference volumes:
@@ -162,13 +153,6 @@ python scripts/preprocess_volume.py \
   --prefix sample
 ```
 
-This script exports:
-
-- `sample_normalized.npy`
-- `sample_gaussian.npy`
-- `sample_bilateral.npy`
-- `sample_edge.npy`
-
 ### Step 4. Export patches
 
 Patch export is optional, but useful for inspection and debugging:
@@ -180,18 +164,6 @@ python scripts/export_patches.py \
   --patch-size 108 108 108 \
   --stride 54 54 54 \
   --normalize
-```
-
-Each patch is saved into an individual folder:
-
-```text
-data/patches/shrec2020/
-└── patch_00000_z0_y0_x0/
-    ├── noisy.npy
-    ├── guide.npy
-    ├── bilateral.npy
-    ├── edge.npy
-    └── index.npy
 ```
 
 ### Step 5. Train the model
